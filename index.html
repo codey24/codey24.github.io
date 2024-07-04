@@ -8,102 +8,27 @@
 </head>
 <body>
     <header>
+        <img src="image.jpg" alt="Profile Picture" class="profile-pic">
         <h1>Putera Danie Faiz Bin Mohd Hazri</h1>
         <p>Bachelor of Mechatronics Engineering Technology</p>
         <p><a href="mailto:daniefaiz@gmail.com">daniefaiz@gmail.com</a> | <a href="https://www.linkedin.com/in/danie-faiz-a80ab3a4">LinkedIn</a> | +60 14-5293823</p>
+        <button onclick="toggleMode()">Toggle Light/Dark Mode</button>
     </header>
     <nav>
         <ul>
             <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#certifications">Certifications</a></li>
             <li><a href="#awards">Awards & Activities</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <section id="about">
         <h2>About Me</h2>
         <p>Bachelor of Mechatronics Engineering student with a strong foundation in PLC programming (Siemens Step 7, Omron) and automation systems. Experienced in designing, troubleshooting, and implementing control systems. Proficient in CAD, robotics, and sensors, with a proven ability to collaborate effectively on team projects. Eager to apply my knowledge and proactive approach to real-world challenges in a dynamic organization. Passionate about continuous learning and innovation in the field of automation.</p>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Development of Web-Based Monitoring System for Tablet Feeding System</h3>
-            <p>Duration: March 2024 - June 2024</p>
-            <p>Objective: Enhance the efficiency and reliability of a tablet feeding machine.</p>
-            <p>Technologies Used: Omron CJ2M PLCs, Node-RED, Python, JavaScript, FINS, MQTT.</p>
-            <p>Your Role: Lead Programmer</p>
-            <p>Challenges Faced: Seamless data acquisition and real-time monitoring.</p>
-            <p>Solutions Implemented: Developed a web-based dashboard, implemented predictive maintenance, and integrated communication protocols.</p>
-            <p>Outcome: Improved machine performance and minimized downtime.</p>
-        </div>
-        <div class="project">
-            <h3>Automatic Production Monitoring and Traceability System</h3>
-            <p>Duration: January 2021 - July 2021</p>
-            <p>Objective: Enhance production processes' efficiency and accuracy.</p>
-            <p>Technologies Used: Arduino, Siemens S7-1200 PLCs.</p>
-            <p>Your Role: Lead Programmer</p>
-            <p>Challenges Faced: Integration of various components for automation.</p>
-            <p>Solutions Implemented: Developed an automated system for labeling, scanning, sorting, and remote monitoring.</p>
-            <p>Outcome: Reduced manual oversight and costs, improved production quality.</p>
-        </div>
-        <div class="project">
-            <h3>Comparative Analysis of YOLO Models for Traffic Light Colour Detection</h3>
-            <p>Objective: Evaluate the performance of YOLO models for traffic light detection.</p>
-            <p>Technologies Used: Python, OpenCV, YOLOv8.</p>
-            <p>Your Role: Lead Programmer</p>
-            <p>Challenges Faced: Varying conditions for traffic light detection.</p>
-            <p>Solutions Implemented: Used pre-processing techniques and conducted a comparative study.</p>
-            <p>Outcome: Improved detection accuracy and reliability.</p>
-        </div>
-        <div class="project">
-            <h3>Design and Implementation of Robot Collating System Control Panel</h3>
-            <p>Objective: Automate the collation process for smart card production.</p>
-            <p>Technologies Used: Omron CQ1M PLCs, Citect SCADA.</p>
-            <p>Your Role: Lead Programmer</p>
-            <p>Challenges Faced: Ensuring safety and efficiency in the collation process.</p>
-            <p>Solutions Implemented: Developed control algorithms and integrated SCADA for monitoring.</p>
-            <p>Outcome: Enhanced production output and minimized human error.</p>
-        </div>
-        <div class="project">
-            <h3>Development of Mini Conveyor System with Mobile Device Control and Monitoring</h3>
-            <p>Objective: Manage the operation of a mini conveyor system.</p>
-            <p>Technologies Used: Omron CJ2M PLCs, Node-RED, SQLite.</p>
-            <p>Your Role: Lead Programmer</p>
-            <p>Challenges Faced: Real-time monitoring and control via mobile devices.</p>
-            <p>Solutions Implemented: Developed control algorithms and integrated Node-RED for web-based monitoring.</p>
-            <p>Outcome: Improved flexibility and productivity.</p>
-        </div>
-        <div class="project">
-            <h3>Teras Jernang Wastewater Treatment Plant Automation Simulation</h3>
-            <p>Objective: Simulate and control processes in a wastewater treatment plant.</p>
-            <p>Technologies Used: Omron PLCs, SCADA.</p>
-            <p>Your Role: Lead Programmer</p>
-            <p>Challenges Faced: Managing various processes within the treatment plant.</p>
-            <p>Solutions Implemented: Developed control algorithms and integrated SCADA for real-time monitoring.</p>
-            <p>Outcome: Comprehensive simulation of the plant's operations.</p>
-        </div>
-    </section>
-    <section id="skills">
-        <h2>Skills</h2>
-        <h3>Technical Skills</h3>
-        <ul>
-            <li>PLC Programming (Siemens Step 7, Omron)</li>
-            <li>CAD</li>
-            <li>Robotics</li>
-            <li>Sensors</li>
-            <li>Automation Systems</li>
-            <li>Control Systems</li>
-        </ul>
-        <h3>Soft Skills</h3>
-        <ul>
-            <li>Team Collaboration</li>
-            <li>Problem-Solving</li>
-            <li>Project Management</li>
-            <li>Communication</li>
-        </ul>
     </section>
     <section id="experience">
         <h2>Experience</h2>
@@ -139,6 +64,147 @@
             <p>Duration: April 2018 – July 2021</p>
         </div>
     </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project" onclick="toggleModal('modal1')">
+            <h3>Development of Web-Based Monitoring System for Tablet Feeding System</h3>
+            <p>Duration: March 2024 - June 2024</p>
+        </div>
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="toggleModal('modal1')">&times;</span>
+                <h3>Development of Web-Based Monitoring System for Tablet Feeding System</h3>
+                <p>Objective: Enhance the efficiency and reliability of a tablet feeding machine.</p>
+                <p>Technologies Used: Omron CJ2M PLCs, Node-RED, Python, JavaScript, FINS, MQTT.</p>
+                <p>Your Role: Lead Programmer</p>
+                <p>Challenges Faced: Seamless data acquisition and real-time monitoring.</p>
+                <p>Solutions Implemented: Developed a web-based dashboard, implemented predictive maintenance, and integrated communication protocols.</p>
+                <p>Outcome: Improved machine performance and minimized downtime.</p>
+            </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project" onclick="toggleModal('modal2')">
+            <h3>Automatic Production Monitoring and Traceability System</h3>
+            <p>Duration: January 2021 - July 2021</p>
+        </div>
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="toggleModal('modal2')">&times;</span>
+                <h3>Automatic Production Monitoring and Traceability System</h3>
+                <p>Objective: Enhance production processes' efficiency and accuracy.</p>
+                <p>Technologies Used: Arduino, Siemens S7-1200 PLCs.</p>
+                <p>Your Role: Lead Programmer</p>
+                <p>Challenges Faced: Integration of various components for automation.</p>
+                <p>Solutions Implemented: Developed an automated system for labeling, scanning, sorting, and remote monitoring.</p>
+                <p>Outcome: Reduced manual oversight and costs, improved production quality.</p>
+            </div>
+        </div>
+        
+        <!-- Project 3 -->
+        <div class="project" onclick="toggleModal('modal3')">
+            <h3>Comparative Analysis of YOLO Models for Traffic Light Colour Detection</h3>
+        </div>
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="toggleModal('modal3')">&times;</span>
+                <h3>Comparative Analysis of YOLO Models for Traffic Light Colour Detection</h3>
+                <p>Objective: Evaluate the performance of YOLO models for traffic light detection.</p>
+                <p>Technologies Used: Python, OpenCV, YOLOv8.</p>
+                <p>Your Role: Lead Programmer</p>
+                <p>Challenges Faced: Varying conditions for traffic light detection.</p>
+                <p>Solutions Implemented: Used pre-processing techniques and conducted a comparative study.</p>
+                <p>Outcome: Improved detection accuracy and reliability.</p>
+            </div>
+        </div>
+        
+        <!-- Project 4 -->
+        <div class="project" onclick="toggleModal('modal4')">
+            <h3>Design and Implementation of Robot Collating System Control Panel</h3>
+        </div>
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="toggleModal('modal4')">&times;</span>
+                <h3>Design and Implementation of Robot Collating System Control Panel</h3>
+                <p>Objective: Automate the collation process for smart card production.</p>
+                <p>Technologies Used: Omron CQ1M PLCs, Citect SCADA.</p>
+                <p>Your Role: Lead Programmer</p>
+                <p>Challenges Faced: Ensuring safety and efficiency in the collation process.</p>
+                <p>Solutions Implemented: Developed control algorithms and integrated SCADA for monitoring.</p>
+                <p>Outcome: Enhanced production output and minimized human error.</p>
+            </div>
+        </div>
+        
+        <!-- Project 5 -->
+        <div class="project" onclick="toggleModal('modal5')">
+            <h3>Development of Mini Conveyor System with Mobile Device Control and Monitoring</h3>
+        </div>
+        <div id="modal5" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="toggleModal('modal5')">&times;</span>
+                <h3>Development of Mini Conveyor System with Mobile Device Control and Monitoring</h3>
+                <p>Objective: Manage the operation of a mini conveyor system.</p>
+                <p>Technologies Used: Omron CJ2M PLCs, Node-RED, SQLite.</p>
+                <p>Your Role: Lead Programmer</p>
+                <p>Challenges Faced: Real-time monitoring and control via mobile devices.</p>
+                <p>Solutions Implemented: Developed control algorithms and integrated Node-RED for web-based monitoring.</p>
+                <p>Outcome: Improved flexibility and productivity.</p>
+            </div>
+        </div>
+        
+        <!-- Project 6 -->
+        <div class="project" onclick="toggleModal('modal6')">
+            <h3>Teras Jernang Wastewater Treatment Plant Automation Simulation</h3>
+        </div>
+        <div id="modal6" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="toggleModal('modal6')">&times;</span>
+                <h3>Teras Jernang Wastewater Treatment Plant Automation Simulation</h3>
+                <p>Objective: Simulate and control processes in a wastewater treatment plant.</p>
+                <p>Technologies Used: Omron PLCs, SCADA.</p>
+                <p>Your Role: Lead Programmer</p>
+                <p>Challenges Faced: Managing various processes within the treatment plant.</p>
+                <p>Solutions Implemented: Developed control algorithms and integrated SCADA for real-time monitoring.</p>
+                <p>Outcome: Comprehensive simulation of the plant's operations.</p>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill-bar">
+            <h3>Technical Skills</h3>
+            <div class="skill">
+                <p>PLC Programming (Siemens Step 7, Omron)</p>
+                <div class="progress-bar" style="width: 90%;"></div>
+            </div>
+            <div class="skill">
+                <p>CAD</p>
+                <div class="progress-bar" style="width: 85%;"></div>
+            </div>
+            <div class="skill">
+                <p>Robotics</p>
+                <div class="progress-bar" style="width: 80%;"></div>
+            </div>
+            <div class="skill">
+                <p>Sensors</p>
+                <div class="progress-bar" style="width: 75%;"></div>
+            </div>
+            <div class="skill">
+                <p>Automation Systems</p>
+                <div class="progress-bar" style="width: 90%;"></div>
+            </div>
+            <div class="skill">
+                <p>Control Systems</p>
+                <div class="progress-bar" style="width: 85%;"></div>
+            </div>
+        </div>
+        <h3>Soft Skills</h3>
+        <ul>
+            <li>Team Collaboration</li>
+            <li>Problem-Solving</li>
+            <li>Project Management</li>
+            <li>Communication</li>
+        </ul>
+    </section>
     <section id="certifications">
         <h2>Certifications</h2>
         <p>Data Labeling for the Future of Artificial Intelligence - Alegion (2022)</p>
@@ -153,8 +219,43 @@
             <li>UniKL Robattle Competition (Robot Combat) (2018)</li>
         </ul>
     </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <form onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
     <footer>
         <p>&copy; 2024 Putera Danie Faiz Bin Mohd Hazri. All rights reserved.</p>
     </footer>
+    <script>
+        function toggleModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.style.display = (modal.style.display === "block") ? "none" : "block";
+        }
+
+        function toggleMode() {
+            var body = document.body;
+            body.classList.toggle("dark-mode");
+        }
+
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            if (name === "" || email === "" || message === "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+            return true;
+        }
+    </script>
 </body>
 </html>
