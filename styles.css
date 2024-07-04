@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #ecf0f1;
-    color: #2c3e50;
+    background-color: #f4f4f4;
+    color: #333;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -14,37 +14,6 @@ header {
     padding: 2rem 0;
     text-align: center;
     transition: background-color 0.5s, color 0.5s;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-header p {
-    margin: 0.5rem 0;
-}
-
-header a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 0.5rem;
-}
-
-header a:hover {
-    text-decoration: underline;
-}
-
-.profile-pic {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.profile-pic:hover {
-    transform: scale(1.1);
 }
 
 nav {
@@ -81,6 +50,24 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -102,30 +89,29 @@ section h2 {
     margin-bottom: 1rem;
 }
 
-.grid {
-    display: grid;
+.skills-container, .experience-container {
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-.skill-bar {
+.skill, .job, .education-item, .project {
+    flex: 1 1 calc(50% - 2rem);
     margin-bottom: 2rem;
 }
 
-.skill {
-    margin-bottom: 1rem;
-}
-
-.progress-bar {
-    height: 20px;
-    background-color: #2ecc71;
-    border-radius: 5px;
-    transition: width 0.5s;
-}
-
-ul {
-    list-style: disc;
+.skill ul {
     padding-left: 1.5rem;
+}
+
+figure {
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 footer {
@@ -137,45 +123,26 @@ footer {
     transition: background-color 0.5s, color 0.5s;
 }
 
-footer p {
-    margin: 0;
+.dark-mode {
+    background-color: #2c3e50;
+    color: #fff;
 }
 
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+.dark-mode header {
+    background: #555;
 }
 
-.modal-content {
-    background-color: #fefefe;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 10px;
+.dark-mode nav {
+    background: #666;
 }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    transition: color 0.3s ease;
+.dark-mode section {
+    background: #444;
+    color: #fff;
 }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+.dark-mode footer {
+    background: #555;
 }
 
 form {
@@ -214,31 +181,51 @@ form button:hover {
     background-color: #2ecc71;
 }
 
-.dark-mode {
-    background-color: #2c3e50;
-    color: #fff;
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-.dark-mode header {
-    background: #555;
+.project {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.dark-mode nav {
-    background: #666;
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.dark-mode section {
-    background: #444;
-    color: #fff;
+.project h3 {
+    margin-top: 0;
+    color: #3498db;
 }
 
-.dark-mode footer {
-    background: #555;
+.project p {
+    margin: 0.5rem 0;
 }
 
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
         gap: 0.5rem;
+    }
+
+    .skills-container, .experience-container {
+        flex-direction: column;
+    }
+
+    .skill, .job, .education-item, .project {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
     }
 }
