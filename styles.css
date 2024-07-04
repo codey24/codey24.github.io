@@ -11,8 +11,9 @@ body {
 header {
     background: #333;
     color: #fff;
-    padding: 1rem 0;
+    padding: 2rem 0;
     text-align: center;
+    transition: background-color 0.5s, color 0.5s;
 }
 
 header h1 {
@@ -39,39 +40,56 @@ header a:hover {
     width: 150px;
     height: 150px;
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
 }
 
 nav {
     background: #444;
     color: #fff;
-    padding: 0.5rem;
+    padding: 1rem;
     text-align: center;
+    transition: background-color 0.5s, color 0.5s;
 }
 
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 0.5rem;
+    margin: 0.5rem;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
+    color: #4CAF50;
     text-decoration: underline;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 section {
     padding: 2rem;
-    margin: 1rem 0;
+    margin: 2rem 0;
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -84,8 +102,10 @@ section h2 {
     margin-bottom: 1rem;
 }
 
-.project, .job, .education-item {
-    margin-bottom: 2rem;
+.grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .skill-bar {
@@ -114,6 +134,7 @@ footer {
     text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;
+    transition: background-color 0.5s, color 0.5s;
 }
 
 footer p {
@@ -134,11 +155,11 @@ footer p {
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto;
+    margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 500px;
+    max-width: 600px;
     border-radius: 10px;
 }
 
@@ -147,6 +168,7 @@ footer p {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .close:hover,
@@ -170,6 +192,11 @@ form input, form textarea {
     margin-top: 0.5rem;
     border-radius: 5px;
     border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #4CAF50;
 }
 
 form button {
@@ -180,10 +207,11 @@ form button {
     background-color: #333;
     color: #fff;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 form button:hover {
-    background-color: #555;
+    background-color: #4CAF50;
 }
 
 .dark-mode {
@@ -209,8 +237,8 @@ form button:hover {
 }
 
 @media (max-width: 768px) {
-    nav ul li {
-        display: block;
-        margin: 0.5rem 0;
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
     }
 }
