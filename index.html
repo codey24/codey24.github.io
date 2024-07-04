@@ -1,10 +1,114 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Putera Danie Faiz Bin Mohd Hazri - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 0.5rem 0;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        nav {
+            background: #444;
+            color: #fff;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 0.5rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 2rem;
+            margin: 1rem 0;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            border-bottom: 2px solid #444;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project, .job, .education-item {
+            margin-bottom: 2rem;
+        }
+
+        ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -12,13 +116,23 @@
         <p>Bachelor of Mechatronics Engineering Technology</p>
         <p><a href="mailto:daniefaiz@gmail.com">daniefaiz@gmail.com</a> | <a href="https://www.linkedin.com/in/danie-faiz-a80ab3a4">LinkedIn</a> | +60 14-5293823</p>
     </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#awards">Awards & Activities</a></li>
+        </ul>
+    </nav>
     <section id="about">
         <h2>About Me</h2>
         <p>Bachelor of Mechatronics Engineering student with a strong foundation in PLC programming (Siemens Step 7, Omron) and automation systems...</p>
     </section>
     <section id="projects">
         <h2>Projects</h2>
-        <!-- Project 1 -->
         <div class="project">
             <h3>Development of Web-Based Monitoring System for Tablet Feeding System</h3>
             <p>Duration: March 2024 - June 2024</p>
@@ -29,7 +143,6 @@
             <p>Solutions Implemented: Developed a web-based dashboard, implemented predictive maintenance, and integrated communication protocols.</p>
             <p>Outcome: Improved machine performance and minimized downtime.</p>
         </div>
-        <!-- Add more projects similarly -->
     </section>
     <section id="skills">
         <h2>Skills</h2>
@@ -58,7 +171,6 @@
             <p>Duration: September 2022</p>
             <p>Responsibilities: Developed a machine learning model for corrosion detection, labeled data based on ISO 4628 standards.</p>
         </div>
-        <!-- Add more experience similarly -->
     </section>
     <section id="education">
         <h2>Education</h2>
@@ -67,7 +179,6 @@
             <p>Bachelor of Mechatronics Engineering Technology with Honors</p>
             <p>Duration: September 2021 - February 2025</p>
         </div>
-        <!-- Add more education similarly -->
     </section>
     <section id="certifications">
         <h2>Certifications</h2>
@@ -78,7 +189,6 @@
         <ul>
             <li>UniKL International RoBattle Competition - Organizer (Line Following Game Manager) (2023)</li>
             <li>Mechanizing The Mind National Stage (Sumo Robot) - First Place (2023)</li>
-            <!-- Add more awards similarly -->
         </ul>
     </section>
     <footer>
@@ -86,3 +196,4 @@
     </footer>
 </body>
 </html>
+```
